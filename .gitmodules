@@ -1,3 +1,3 @@
-[submodule "learning"]
-    path = ~/learning
-    url = https://github.com/butteria/learning
+[submodule ".zsh/plugin/zsh-completions"]
+    path = .zsh/plugin/zsh-completions
+    url = https://github.com/zsh-users/zsh-completions.git
