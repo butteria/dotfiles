@@ -23,9 +23,16 @@ ex ()
   fi
 }
 
-alias zcfg="$EDITOR $HOME/.zsh/.zshrc"
+alias zshrc="$EDITOR ~/.zsh/.zshrc"
+alias vimrc="$EDITOR ~/.vim/vimrc"
+alias aliasrc="$EDITOR ~/.zsh/aliasrc"
 alias svim="sudo -E vim"
 alias ..="cd .."
 alias ~="cd ~"
 alias cls="clear"
 alias dot="dotbare"
+alias mppv="mpv --scripts= ~/.config/mpv/"
+
+# replace rm with trash-cli
+alias rm="trash-put"
+alias rl="trash-list"

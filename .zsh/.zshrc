@@ -9,19 +9,10 @@ fi
 export NNN_PLUG='p:preview-tui'
 export NNN_FIFO=/tmp/nnn.fifo
 
-# User configuration
-export MANPATH="/usr/local/man:$MANPATH"
-export LANG=en_US.UTF-8
-export EDITOR='vim'
-export ARCHFLAGS="-arch x86_64"
-export ZPLUGIN="$HOME/.zsh/plugin"
-
-# History in cache directory
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=$HOME/.zsh/.zsh_history
 setopt appendhistory
-
 
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
