@@ -30,6 +30,7 @@ zstyle ':completion:*' menu select
 
 fpath=($ZPLUGIN/zsh-completions/src $fpath)
 autoload -Uz compinit && compinit
+#_dotbare_completion_cmd
 
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.zsh/aliasrc" ] && source "$HOME/.zsh/aliasrc"
