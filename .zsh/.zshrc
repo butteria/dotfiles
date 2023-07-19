@@ -1,12 +1,12 @@
 # pokemon theme
-pokemon-colorscripts -r --no-title
+#pokemon-colorscripts -r --no-title
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-export NNN_PLUG='p:preview-tui'
+export NNN_PLUG='v:preview-tui'
 export NNN_FIFO=/tmp/nnn.fifo
 
 HISTSIZE=10000
@@ -18,20 +18,21 @@ setopt appendhistory
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
-
 # Plugin
-source $ZPLUGIN/powerlevel10k/powerlevel10k.zsh-theme
-source $ZPLUGIN/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZPLUGIN/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZPLUGIN/dotbare/dotbare.plugin.zsh
-
-# enable the tab-completion menu
+# zsh-completions
 zstyle ':completion:*' menu select
-
-fpath=($ZPLUGIN/zsh-completions/src $fpath)
+fpath=($ZPLUG_DIR/zsh-completions/src $fpath)
 autoload -Uz compinit && compinit
-#_dotbare_completion_cmd
 
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/.zsh/aliasrc" ] && source "$HOME/.zsh/aliasrc"
-[ -f "$HOME/.zsh/pluginrc" ] && source "$HOME/.zsh/pluginrc"
+source $ZPLUG_DIR/dotbare/dotbare.plugin.zsh
+# dotbare completion
+_dotbare_completion_cmd
+source $ZPLUG_DIR/forgit/completions/git-forgit.zsh
+source $ZPLUG_DIR/forgit/forgit.plugin.zsh
+export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
+source $ZPLUG_DIR/powerlevel10k/powerlevel10k.zsh-theme
+source $ZPLUG_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZPLUG_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source "$HOME/.zsh/aliasrc"
+source "$HOME/.zsh/pluginrc.zsh"

@@ -25,12 +25,13 @@ ex ()
 
 alias zshrc="$EDITOR ~/.zsh/.zshrc"
 alias vimrc="$EDITOR ~/.vim/vimrc"
+alias kittyrc="$EDITOR ~/.config/kitty/kitty.conf"
 alias aliasrc="$EDITOR ~/.zsh/aliasrc"
 alias svim="sudo -E vim"
 alias ..="cd .."
 alias ~="cd ~"
 alias cls="clear"
-alias dot="dotbare"
+alias dot='dotbare'
 alias mppv="mpv --scripts= ~/.config/mpv/"
 
 # replace rm with trash-cli
