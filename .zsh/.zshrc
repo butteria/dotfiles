@@ -1,3 +1,4 @@
+
 # pokemon theme
 
 pokemon-colorscripts -r --no-title
@@ -12,8 +13,6 @@ pokemon-colorscripts -r --no-title
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-export NNN_PLUG='v:preview-tui;l:nmount'
-export NNN_FIFO=/tmp/nnn.fifo
 
 HISTSIZE=10000
 SAVEHIST=10000
@@ -40,5 +39,7 @@ source $ZPLUG_DIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZPLUG_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZPLUG_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source "$HOME/.zsh/aliasrc"
 source "$HOME/.zsh/pluginrc.zsh"
+source "$HOME/.zsh/aliasrc"
+# stash dotfiles on startup
+dot add -u

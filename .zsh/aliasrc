@@ -45,3 +45,6 @@ alias mppv="mpv --scripts= ~/.config/mpv/"
 # replace rm with trash-cli
 alias rm="trash-put"
 alias rl="trash-list"
+
+# use todo-txt cli to act as memo
+alias todo='todo.sh'
