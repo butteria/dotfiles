@@ -1,6 +1,6 @@
-# # ex - archive extractor
-# # usage: ex <file>
-ex ()
+# extr - archive extractor
+# usage: extr <file>
+extr ()
 {
   if [ -f $1 ] ; then
     case $1 in
@@ -22,8 +22,16 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+# Changing "ls" to "exa" with icons
+alias ls='exa --icons --color=always --group-directories-first'
+alias ll='exa -alF --icons --color=always --group-directories-first'
+alias la='exa -a --icons --color=always --group-directories-first'
+alias l='exa -F --icons --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
+
 
 alias zshrc="$EDITOR ~/.zsh/.zshrc"
+alias mpvbookmark="$EDITOR ~/.config/mpv/mpvBookmark.log"
 alias vimrc="$EDITOR ~/.vim/vimrc"
 alias kittyrc="$EDITOR ~/.config/kitty/kitty.conf"
 alias aliasrc="$EDITOR ~/.zsh/aliasrc"

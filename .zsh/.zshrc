@@ -1,12 +1,18 @@
 # pokemon theme
-#pokemon-colorscripts -r --no-title
+
+pokemon-colorscripts -r --no-title
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
+# apply dircolor theme
+#eval "$(dircolors ~/.zsh/gruvbox.dircolors)"
+
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-export NNN_PLUG='v:preview-tui'
+export NNN_PLUG='v:preview-tui;l:nmount'
 export NNN_FIFO=/tmp/nnn.fifo
 
 HISTSIZE=10000
