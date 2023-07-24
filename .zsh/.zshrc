@@ -1,7 +1,7 @@
 
 # pokemon theme
 
-pokemon-colorscripts -r --no-title
+#pokemon-colorscripts -r --no-title
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
