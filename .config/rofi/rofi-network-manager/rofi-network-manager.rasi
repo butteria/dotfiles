@@ -1,17 +1,14 @@
 configuration {
-	show-icons:                     false;
+	show-icons:             false;
 	sidebar-mode: 			false;
 }
 *{
-	font: "DejaVu Sans Mono 14"; // Font
-	// font: "JetBrains Mono Regular Nerd Font Complete 9";
-	//Colors
-	foreground:#d4be98; //Text
-	background:#282828; //Background
-	accent:#a9b665; //Hightlight
-	foreground-selection:#32302f; //Selection_fg
-	background-selection:#a9b665; //Selection_bg
-
+	font: "TerminessTTF Nerd Font Mono 12";
+    foreground:#d4be98;
+	background:#282828;
+	accent:#a9b665;
+	foreground-selection:#32302f;
+	background-selection:#a9b665;
 	background-color: @background;
 	text-color: @foreground ;
 	selected-normal-foreground:  @foreground-selection;
@@ -49,8 +46,8 @@ textbox {
 }
 listview {
 	fixed-height: 		0;
-	border: 		0px;
-	scrollbar: 		false;
+	border: 		    0px;
+	scrollbar: 		    false;
 	text-color:  		@separatorcolor;
 }
 element {
@@ -109,7 +106,7 @@ button normal {
 }
 inputbar {
 	children: [textbox-prompt-colon,entry];
-}                           
+}
 textbox-prompt-colon{
 	expand: false;
 	margin: 0;
