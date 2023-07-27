@@ -1,0 +1,35 @@
+[user]
+	email = 1340075229@qq.com
+	name = butteria
+[http]
+	sslverify = false
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = vim
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[init]
+	defaultBranch = main
+[url "https://ghproxy.com/"]
+	insteadOf = https://
