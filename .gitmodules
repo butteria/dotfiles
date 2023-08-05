@@ -1,7 +1,28 @@
 # zsh plug
+# Fish-like autosuggestions for zsh.
+[submodule "zsh-autosuggestions"]
+    path = .zsh/plugin/zsh-autosuggestions
+    url = https://github.com/zsh-users/zsh-autosuggestions
+
+# Fish shell like syntax highlighting for Zsh.
+[submodule "zsh-syntax-highlighting"]
+    path = .zsh/plugin/zsh-syntax-highlighting
+    url = https://github.com/zsh-users/zsh-syntax-highlighting
+
+# Additional completion definitions for Zsh.
 [submodule "zsh-completions"]
     path = .zsh/plugin/zsh-completions
-    url = https://github.com/zsh-users/zsh-completions.git
+    url = https://github.com/zsh-users/zsh-completions
+
+# A utility tool powered by fzf for using git interactively.
+[submodule "forgit"]
+    path = .zsh/plugin/forgit
+    url = https://github.com/wfxr/forgit
+
+# Zsh theme.
+[submodule "powerlevel10k"]
+    path = .zsh/plugin/powerlevel10k
+    url = https://github.com/romkatv/powerlevel10k
 
 
 # vim plug

@@ -29,9 +29,6 @@ zstyle ':completion:*' menu select
 fpath=($ZPLUG_DIR/zsh-completions/src $fpath)
 autoload -Uz compinit && compinit
 
-source $ZPLUG_DIR/dotbare/dotbare.plugin.zsh
-# dotbare completion
-_dotbare_completion_cmd
 source $ZPLUG_DIR/forgit/completions/git-forgit.zsh
 source $ZPLUG_DIR/forgit/forgit.plugin.zsh
 export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"

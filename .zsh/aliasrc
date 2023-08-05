@@ -22,6 +22,11 @@ extr ()
     echo "'$1' is not a valid file"
   fi
 }
+
+# use git bare to manage linux dotfiles.
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree $HOME"
+
+
 # Changing "ls" to "exa" with icons
 alias ls='exa --icons --color=always --group-directories-first'
 alias ll='exa -alF --icons --color=always --group-directories-first'
@@ -41,7 +46,6 @@ alias svim="sudo -E vim"
 alias ..="cd .."
 alias ~="cd ~"
 alias cls="clear"
-alias dot='dotbare'
 alias mppv="mpv --scripts= ~/.config/mpv/"
 
 # replace rm with trash-cli
