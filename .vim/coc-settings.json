@@ -1,0 +1,4 @@
+{
+    "clangd.disableDiagnostics": true,
+    "snippets.ultisnips.pythonPrompt": false
+}

@@ -1,3 +1,48 @@
-[submodule ".zsh/plugin/zsh-completions"]
+# zsh plug
+[submodule "zsh-completions"]
     path = .zsh/plugin/zsh-completions
     url = https://github.com/zsh-users/zsh-completions.git
+
+
+# vim plug
+# tree explorer
+[submodule "nerdtree"]
+    path = .vim/plugged/nerdtree
+    url = https://github.com/preservim/nerdtree
+[submodule "nerdtree-git-plugin"]
+    path = .vim/plugged/nerdtree-git-plugin
+    url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "vim-devicons"]
+    path = .vim/plugged/vim-devicons
+    url = https://github.com/ryanoasis/vim-devicons
+[submodule "vim-nerdtree-syntax-highlight"]
+    path = .vim/plugged/vim-nerdtree-syntax-highlight
+    url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+
+# completions
+[submodule "coc"]
+    path = .vim/plugged/coc.nvim
+    url = https://github.com/neoclide/coc.nvim
+
+# status/tabline
+[submodule "vim-airline"]
+    path = .vim/plugged/vim-airline
+    url = https://github.com/vim-airline/vim-airline
+
+# comment
+[submodule "vim-commentary"]
+    path = .vim/plugged/vim-commentary
+    url = https://github.com/tpope/vim-commentary
+
+# snippets
+[submodule "vim-snippets"]
+    path = .vim/plugged/vim-snippets
+    url = https://github.com/honza/vim-snippets
+[submodule "ultisnips"]
+    path = .vim/plugged/ultisnips
+    url = https://github.com/SirVer/ultisnips
+
+# terminal manager
+[submodule "vim-floaterm"]
+    path = .vim/plugged/vim-floaterm
+    url = https://github.com/voldikss/vim-floaterm

@@ -30,6 +30,8 @@ alias l='exa -F --icons --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 
 
+alias pacman="sudo pacman"
+alias calendar="cal"
 alias zshrc="$EDITOR ~/.zsh/.zshrc"
 alias mpvbookmark="$EDITOR ~/.config/mpv/mpvBookmark.log"
 alias vimrc="$EDITOR ~/.vim/vimrc"

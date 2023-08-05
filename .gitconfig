@@ -31,5 +31,5 @@
 	whitespace = red reverse
 [init]
 	defaultBranch = main
-[url "https://ghproxy.com/"]
-	insteadOf = https://
+# [url "https://ghproxy.com/"]
+# 	insteadOf = https://
