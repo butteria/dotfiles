@@ -1,66 +1,13 @@
-" Sections:
-"    -> Auto function
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Maps
-"    -> Misc
-"    -> Helper functions
-" sacsc
-
-" if smarttab enabled, that will mess it. use function below to keep its
-" format when pasting from clipboard
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
-
-function! XTermPasteBegin()
-      set pastetoggle=<Esc>[201~
-        set paste
-          return ""
-endfunction
-
-
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""
-" => Auto function
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" Delete trailing white space and fix mix-indent on save, useful for some filetypes ;)
-fun! CleanExtraSpacesAndFixIndent()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    " !!! tab can not be replace in makefile
-    "silent! %s/\t/    /ge
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
-if has("autocmd")
-    autocmd BufWritePre * :call CleanExtraSpacesAndFixIndent()
-endif
-
-"Auto change line number mode, rnu in normal mode, nu in insert mode
-augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-    autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-augroup END
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""
+source ~/.vim/config/autofunc.vim
+source ~/.vim/config/helperfunc.vim
+source ~/.vim/config/keymaps.vim
 " sets how many lines of history VIM has to remember
 set history=500
-
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+""
+
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -68,7 +15,6 @@ au FocusGained,BufEnter * checktime
 
 "with a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
-let mapleader = ","
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
@@ -305,6 +251,7 @@ call plug#begin()
     Plug 'voldikss/vim-floaterm'
     Plug 'honza/vim-snippets' |
         \ Plug 'SirVer/ultisnips'
+    Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
