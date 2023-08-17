@@ -1,3 +1,14 @@
+" check vim statup time.
+" vim --startuptime /tmp/startup.log +q && vim /tmp/startup.log
+
+
+" smart cursor: change cursor type in different mode.
+" https://github.com/kovidgoyal/kitty/issues/2045
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
+
 source ~/.vim/config/autofunc.vim
 source ~/.vim/config/helperfunc.vim
 source ~/.vim/config/keymaps.vim

@@ -24,8 +24,20 @@ setopt appendhistory
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
 # Plugin
+source ~/.zsh/lscolors.sh
 # zsh-completions
 zstyle ':completion:*' menu select
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+
+# Uses LS_COLORS format
+zstyle $pattern list-colors ${(s[:])LS_COLORS} '*.ext=1'
+
+
+
+
 fpath=($ZPLUG_DIR/zsh-completions/src $fpath)
 autoload -Uz compinit && compinit
 
@@ -34,9 +46,14 @@ source $ZPLUG_DIR/forgit/forgit.plugin.zsh
 export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
 source $ZPLUG_DIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZPLUG_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# show hidden files.
+setopt globdots
 source $ZPLUG_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugin/fzf-tab/fzf-tab.plugin.zsh
+
+
 
 source "$HOME/.zsh/pluginrc.zsh"
-source "$HOME/.zsh/aliasrc"
+source "$HOME/.zsh/aliasrc.zsh"
 # stash dotfiles on startup
 dot add -u

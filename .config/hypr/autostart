@@ -4,8 +4,13 @@
 swww init
 swww img --transition-step=30  ~/Pictures/wallpapers/craig-nacroix-dokkaebi.png
 
+
+# set cursor theme
+hyprctl setcurosr "Vimix Cursors"
+
+#wl-paste --watch cliphist store
 # eww status bar
-$HOME/.local/bin/eww -c $HOME/.config/eww/bar --restart open bar &
+eww open-many bar
 
 # input method
 fcitx5 &

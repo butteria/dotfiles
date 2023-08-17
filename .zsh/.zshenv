@@ -2,3 +2,35 @@
 export EDITOR="vim"
 export ARCHFLAGS="-arch x86_64"
 export ZPLUG_DIR="$HOME/.zsh/plugin"
+
+
+# gruvbox fzf theme.
+export FZF_THEME='
+--color=dark
+--color=fg:#ebdbb2
+--color=bg:#282828
+--color=hl:#fabd2f
+--color=fg+:#ebdbb2
+--color=bg+:#665c54
+--color=hl+:#fabd2f
+--color=gutter:#282828
+--color=info:#d65d0e
+--color=separator:#282828
+--color=border:#e7d7ad
+--color=label:#eebd35
+--color=prompt:#7fa2ac
+--color=spinner:#fabd2f
+--color=pointer:bold:#fabd2f
+--color=marker:#cc241d
+--color=header:#d65d0e
+--color=preview-fg:#ebdbb2
+--color=preview-bg:#282828
+'
+export FZF_DEFAULT_OPTS="${FZF_THEME}
+--cycle
+--no-hscroll
+"
+
+# mpv encode
+export AES_KEY="77c9f3be1343d8f45324d38e9747cfad0482718440d09fdd1f763acf86055233"
+export AES_IV="1c1d79dd08ea6f8f16475779ca045774"

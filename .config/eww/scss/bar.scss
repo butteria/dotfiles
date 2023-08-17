@@ -1,8 +1,7 @@
 *{
     all: unset;
     color: #282828;
-    font-size : 22px;
-    font-weight : bold;
+    font-size : 18px;
     margin: -3px 0px -3px 0px;
     font-family: TerminessTTF Nerd Font Mono;
 }
@@ -24,38 +23,30 @@ tooltip label { margin: 2px; }
 scale trough {
     all: unset;
     background-color: #cecacd;
-    border-radius: 16px;
-    min-height: 10px;
+    border-radius: 10px;
+    min-height: 5px;
     min-width: 70px;
     margin: 0px 10px 0px 0px;
 }
 
 /** Widgets **/
-/* time and date */
-.clock_time_sep { font-size: 12; }
-.clock_time_class, .clock_minute_class { font-size: 22; }
-.clock_date_class { font-size: 22; margin: 0px 12px 0px -1px; }
-.clock_minute_class { font-weight: bold; margin: 0px 12px 0px 3px; }
-.clock_time_class { font-weight: bold; }
-
-/* ram usage */
-.iconmem { margin: 10px; }
-.membar { background-color: #cecacd; }
-
-
+.separ { font-size: 28px; margin: 0px 5px 0px 5px; }
 /* volume bar */
-.volume_icon { font-size: 22; }
+.volume_icon { font-size: 28px; }
 .volbar trough highlight {
     background-image: linear-gradient(to right, #282828 30%, #282828 50%, #282828 100% *50);
     border-radius: 10px;
 }
+/* ram usage */
+.iconmem { margin: 8px; }
+.membar { background-color: #cecacd; }
+
 
 .tray_icon {
     font-size: 14;
     color: rgba(#a1bdce, 0.85);
     margin: 0px 10px 0px 10px;
 }
-
 
 .ssid_text {
     font-size: 14;
@@ -74,42 +65,6 @@ scale trough {
     color: #575268;
 }
 
-
-.separ { font-size: 22px; margin: 0px 5px 0px 5px; }
-
-
-
-.works {
-    font-size: 35px;
-    font-weight: normal;
-    margin: 2px 0px 0px 2px;
-}
-
-.0 , .01, .02, .03, .04, .05, .06,
-.011, .022, .033, .044, .055, .066{
-    margin: 0px 10px 0px 0px;
-}
-
-/* Unoccupied */
-.0 {
-    color: #3e424f;
-}
-
-/* Occupied */
-.01, .02, .03, .04, .05, .06 {
-    color: #7aa2f7;
-}
-
-/* Focused */
-.011, .022, .033, .044, .055, .066 {
-    color: #f6c177;
-}
-
-.powermenu_botton {
-    margin: 0px 0px 0px 12px;
-}
-
-
 .song_cover_art {
     background-size: cover;
     background-position: center;
@@ -119,12 +74,7 @@ scale trough {
     border-radius: 100px;
 }
 
-.song {
-    color: #cecacd;
-    font-size : 18px;
-    font-weight : bold;
-    margin : 2px 5px 0px 0px;
-}
+.song { font-size : 22px; }
 
 .song_btn_play {
     color: #dfdad9;
@@ -142,81 +92,26 @@ scale trough {
 }
 // Calendar
 .cal {
-    background-color: #1b1a27;
-    font-family: Maple Mono SC NF;
+    background-color: #282828;
     font-size: 18px;
     font-weight: normal;
+    margin: 0px -0px -40px 0px;
+    border: 1px solid rgba(40, 172, 91, 0.034);
 
     .cal-in {
-        padding: 0px 10px 0px 10px;
-        color: #bfc9db;
-
-        .cal {
-            &.highlight {
-                padding: 20px;
-            }
-
-            padding: 5px 5px 5px 5px;
-            margin-left: 10px;
-        }
+        color: #a9b665;
+        .cal { padding: 5px 5px 5px 5px; }
     }
 }
+calendar { color:#cecacd; }
+calendar.header { color: #a9b665; }
+calendar.highlight { color: #a9b665;}
+calendar:selected { background-color: #a9b665; color: #282828; }
+calendar.button { color: #ffffff; }
+calendar:indeterminate { color: #282828; }
 
-calender {
-    color: #bfc9db;
-}
-calendar:selected {
-    color: #7aa2f7;
-}
-
-calendar.header {
-    color: #a1bdce;
-    font-weight: bold;
-}
-
-calendar.button {
-    color: #afbea2;
-}
-
-calendar.highlight {
-    color: #a1bdce;
-    font-weight: bold;
-}
-
-calendar:indeterminate {
-    color: #bfc9db;
-}
-
-
-.sys_sep {
-    margin: 0px 10px 0px 10px;
-}
-.sys_text_mem_sub {
-    font-size: 16;
-    color: #bbc5d7;
-    margin: 5px 0px 0px 25px;
-}
-.sys_text_mem {
-    font-size: 21;
-    font-weight: bold;
-    margin: 14px 0px 0px 25px;
-}
-.sys_icon_mem {
-    font-size: 10;
-    margin: 20px;
-}
-.sys_win {
-    background-color: #1b1a27;
-}
-.sys_mem {
-    color: #e4c9af;
-    background-color: #38384d;
-    border-radius: 10px;
-}
-.sys_icon_mem, .sys_text_mem {
-    color: #e4c9af;
-}
-.sys_mem_box {
-    border-radius: 16px;
-    margin: 0px 0px 0px 0px;
-}
+/* time and date */
+.clock_time_class { font-size: 22; }
+.clock_time_sep { font-size: 16; }
+.clock_minute_class { font-size: 28; font-weight: bold; margin: 0px 6px 0px 3px; }
+.clock_date_class{ margin: 0px 12px 0px -1px; }
