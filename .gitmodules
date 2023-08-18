@@ -23,6 +23,9 @@
     path = .zsh/plugin/powerlevel10k
     url = https://github.com/romkatv/powerlevel10k
 
+[submodule "fzf-tab"]
+	path = fzf-tab
+	url = /home/butteria/.zsh/plugin/fzf-tab
 
 # vim plug
 # tree explorer
