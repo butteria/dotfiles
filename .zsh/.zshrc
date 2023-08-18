@@ -43,7 +43,7 @@ autoload -Uz compinit && compinit
 
 source $ZPLUG_DIR/forgit/completions/git-forgit.zsh
 source $ZPLUG_DIR/forgit/forgit.plugin.zsh
-export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
+export PATH="$PATH:$FORGIT_INSTALL_DIR/bin:$HOME/.local/bin"
 source $ZPLUG_DIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZPLUG_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # show hidden files.

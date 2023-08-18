@@ -2,7 +2,7 @@
 
 # wallpaper
 swww init
-swww img --transition-step=30  ~/Pictures/wallpapers/craig-nacroix-dokkaebi.png
+swww img ~/Pictures/wallpapers/craig-nacroix-dokkaebi.png
 
 
 # set cursor theme
