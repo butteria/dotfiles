@@ -24,7 +24,7 @@ setopt appendhistory
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
 # Plugin
-source ~/.zsh/lscolors.sh
+source ~/.zsh/lscolors.zsh
 # zsh-completions
 zstyle ':completion:*' menu select
 # set list-colors to enable filename colorizing
