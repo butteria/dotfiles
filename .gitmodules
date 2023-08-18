@@ -19,6 +19,10 @@
     path = .zsh/plugin/forgit
     url = https://github.com/wfxr/forgit
 
+[submodule "fzf-tab"]
+    path = .zsh/plugin/fzf-tab
+    url = https://github.com/Aloxaf/fzf-tab
+
 # Zsh theme.
 [submodule "powerlevel10k"]
     path = .zsh/plugin/powerlevel10k
