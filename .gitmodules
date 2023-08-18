@@ -24,7 +24,7 @@
     url = https://github.com/romkatv/powerlevel10k
 
 [submodule "fzf-tab"]
-	path = fzf-tab
+	path = .zsh/plugin/fzf-tab
 	url = /home/butteria/.zsh/plugin/fzf-tab
 
 # vim plug
