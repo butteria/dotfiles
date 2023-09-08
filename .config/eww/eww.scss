@@ -1,3 +1,7 @@
-@import "scss/bar.scss";
-@import "scss/powermenu.scss";
-@import "scss/player.scss";
+* {
+    all: unset;
+}
+
+@import "css/bar.scss";
+//@import "css/powermenu.scss";
+//@import "css/player.scss";

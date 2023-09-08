@@ -34,3 +34,5 @@ export FZF_DEFAULT_OPTS="${FZF_THEME}
 # mpv encode
 export AES_KEY="6e17aa64249d64b9f17758d7a44ad659"
 export AES_IV="1c1d79dd08ea6f8f16475779ca045774"
+
+source $HOME/.zsh/aliasrc.zsh

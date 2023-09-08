@@ -1,0 +1,41 @@
+#!/bin/bash
+
+WORKSPACE_ICONS='{
+    "1": "",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": "",
+    "6": "",
+    "7": "",
+    "8": "",
+    "9": "",
+    "10": ""
+}'
+WORKSPACE_SUPERSCRIPTS='{
+    "1": "¹",
+    "2": "²",
+    "3": "³",
+    "4": "⁴",
+    "5": "⁵",
+    "6": "⁶",
+    "7": "⁷",
+    "8": "⁸",
+    "9": "⁹",
+    "10": "¹⁰"
+}'
+
+spaces()
+{
+	WORKSPACE_WINDOWS=$(hyprctl workspaces -j | jq 'map({key: .id | tostring, value: .windows}) | from_entries')
+    seq 10 | jq --argjson windows "${WORKSPACE_WINDOWS}" \
+                --argjson icons "${WORKSPACE_ICONS}" \
+                --argjson superscripts "${WORKSPACE_SUPERSCRIPTS}" \
+        --slurp -Mc 'map(tostring) | map({id: ., windows: ($windows[.]//0), icons: $icons[.], superscripts: $superscripts[.]}) | map(select(.windows != 0))'
+}
+
+
+spaces
+socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+	spaces
+done

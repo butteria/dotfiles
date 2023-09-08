@@ -1,0 +1,26 @@
+#! /bin/sh
+
+# swww set image wallpaper
+swww init
+swww img ~/Pictures/wallpapers/keyboard_blue.jpg
+
+# mpvpaper set video wallpaper
+# mpvpaper -o "input-ipc-server=/tmp/mpv-socket no-audio --loop-file" eDP-1 ~/Pictures/wallpapers/animate &
+
+# screenshots: flameshot
+# /usr/local/bin/flameshot &
+
+# set cursor theme
+hyprctl setcurosr XCURSOR_THEME XCURSOR_SIZE
+
+#wl-paste --watch cliphist store
+# eww status bar
+# eww open-many left_bar
+
+# input method
+fcitx5 &
+
+## steam and github proxy
+#cd /opt/steamcommunity_302/ && ./caddy run \
+#    --config steamcommunity_302.caddy.json \
+#    --adapter caddyfile &
