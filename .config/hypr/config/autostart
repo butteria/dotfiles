@@ -2,13 +2,17 @@
 
 # swww set image wallpaper
 swww init
-swww img ~/Pictures/wallpapers/keyboard_blue.jpg
+swww img ~/Pictures/wallpapers/craig-nacroix-dokkaebi.png
 
 # mpvpaper set video wallpaper
 # mpvpaper -o "input-ipc-server=/tmp/mpv-socket no-audio --loop-file" eDP-1 ~/Pictures/wallpapers/animate &
 
 # screenshots: flameshot
 # /usr/local/bin/flameshot &
+
+# eww bar
+eww daemon
+eww open bar
 
 # set cursor theme
 hyprctl setcurosr XCURSOR_THEME XCURSOR_SIZE

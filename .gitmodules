@@ -69,3 +69,8 @@
 [submodule "vim-floaterm"]
     path = .vim/plugged/vim-floaterm
     url = https://github.com/voldikss/vim-floaterm
+
+# visual multi selection
+[submodule "vim-visual-multi"]
+    path = .vim/plugged/vim-visual-multi
+    url = https://github.com/mg979/vim-visual-multi

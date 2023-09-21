@@ -1,5 +1,5 @@
 // import colors
-@import 'frosted_glass';
+@import "colors/gruvbox";
 
 * {
     font-family: TerminessTTF Nerd Font Mono;
@@ -8,21 +8,25 @@
 ///* workspaces */
 .workspaces_widget {
     border-radius:8px;
+    border: 1px solid $border;
     padding: .2rem .5rem 0.2rem .5rem;
-    background-color: $background;
+    background-color: $bg;
 }
 .workspace_entry {
-    color: $foreground;
+    color: $fg;
     border-radius:8px;
     margin: 0 0 0 0;
 }
-.workspace_superscripts {
-    font-size: 16px;
-}
-//.workspace_icons{
-//}
-//
 .current {
-    color: $workspace_current_foreground;
-    background-color: $workspace_current_background;
+    color: $workspace_current_fg;
+    background-color: $workspace_current_bg;
+}
+// show window nums in current workspace.
+.workspace_superscripts {
+    font-size: 22px;
+    font-weight: bold;
+}
+.active_window {
+    color: #ffffff;
+    font-size: 14px;
 }

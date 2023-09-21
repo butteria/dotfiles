@@ -1,38 +1,46 @@
 ;; workspace on hyprland.
+
+(defvar WORKSPACE_SUPERSCRIPTS '["¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹","¹⁰"]')
+(defvar WORKSPACE_ICONS '["","","","4","5","6","7","8","9","10"]')
+
 (deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/workspaces/get-workspaces")
 (deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/workspaces/get-active-workspace")
 (defwidget workspaces []
+  (revealer
+    :reveal "${ workspaces == "[]" ? false : true}"
   (eventbox
     :onscroll "bash ~/.config/eww/scripts/workspaces/change-active-workspace {} ${current_workspace}"
     (box
       :class "workspaces_widget"
       :space-evenly false
-      (for workspace in workspaces
-        (eventbox
-          :onclick "hyprctl dispatch workspace ${workspace.id}"
-          (box
-            :spacing "5"
-            :space-evenly false
-            :class "workspace_entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
-              (label
-                :class "workspace_superscripts"
-                :text "${workspace.superscripts}"
-                :xalign "1" :yalign "0"
-                )
-              (label :text "${workspace.icons} " :class "workspace_icons")
-          )
+        (for workspace in workspaces
+          (eventbox
+            :onclick "hyprctl dispatch workspace ${workspace.id}"
+            (box
+              :spacing "0"
+              :space-evenly false
+              :class "workspace_entry ${workspace.id == current_workspace ? "current" : ""} ${workspace.windows > 0 ? "occupied" : "empty"}"
+                (label
+                  ;:class "workspace_superscripts ${workspace.id == current_workspace ? "current" : ""}"
+                  :class "workspace_superscripts"
+                  :text "${WORKSPACE_SUPERSCRIPTS[workspace.windows - 1]}"
+                  :xalign "1" :yalign "0"
+                  )
+                (label :text "${WORKSPACE_ICONS[workspace.id] } " :class "workspace_icons")
+              )
+            )
         )
-      )
     )
-  )
+    )
+    )
 )
 (defwindow bar
   :monitor 0
   :orientation "h"
   :geometry (geometry :x "0px"
                       :y "0px"
-                      :width "20%"
-                      :height "1%"
+                      :width "0"
+                      :height "0"
                       :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
