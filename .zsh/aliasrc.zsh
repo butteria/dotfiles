@@ -5,9 +5,15 @@ alias figletsub='figlet -f "Calvin S.flf"'
 alias boxensub='boxen --border-style=single'
 alias titlesub='figletsub | boxensub'
 
+# use fzf and nmcli to connect network.
+alias fzfnet="$HOME/.local/scripts/nmcli_choose"
+
+
 # use git bare to manage linux dotfiles.
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree $HOME"
 
+
+alias v="vim"
 alias vi="vim"
 alias pacman="sudo pacman"
 alias calendar="cal"

@@ -1,0 +1,25 @@
+#! /bin/bash
+unset passwd
+prompt="Enter '$1's Password:"
+mask_char="*"
+
+while IFS= read -rs -p "$prompt" -n1 char
+do
+    if [[ $char == $'\0' ]] ; then
+        printf '\n' >&2
+        break
+    fi
+    # handle backspace
+    if [[ $char == $'\177' ]] ; then
+        if [[ ${#passwd} -gt 0 ]] ; then
+            prompt=$'\b \b'
+            passwd="${passwd%?}"
+        else
+            prompt=""
+        fi
+    else
+        passwd+="$char"
+        prompt=$mask_char
+    fi
+done
+nmcli device wifi connect $2 password $passwd
