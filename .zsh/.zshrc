@@ -55,5 +55,3 @@ source ~/.zsh/plugin/fzf-tab/fzf-tab.plugin.zsh
 source "$HOME/.zsh/pluginrc.zsh"
 # !! only interactive alias are included by .zshrc, others are loaded by .zshenv for all.
 source "$HOME/.zsh/aliasrc_interactive.zsh"
-# stash dotfiles on startup
-dot add -u

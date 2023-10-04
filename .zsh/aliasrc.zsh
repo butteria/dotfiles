@@ -15,6 +15,8 @@ alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree $HOME"
 
 alias v="vim"
 alias vi="vim"
+alias nvi="nvim"
+alias nv="nvim"
 alias pacman="sudo pacman"
 alias calendar="cal"
 alias zshrc="$EDITOR ~/.zsh/.zshrc"

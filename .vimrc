@@ -254,7 +254,7 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin
 """""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin()
+call plug#begin('~/.vim/plugged')
     ""Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-commentary'
     Plug 'vim-airline/vim-airline'
