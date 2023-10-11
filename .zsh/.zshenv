@@ -1,9 +1,14 @@
 # use printenv commmand to print all env variable
-export EDITOR="vim"
+# use neovim in gui and vim in tty mode.
+[[ -n $DISPLAY ]] && EDITOR="nvim" || EDITOR="vim"
+export EDITOR
+
 export ARCHFLAGS="-arch x86_64"
 export ZPLUG_DIR="$HOME/.zsh/plugin"
 # add environment path here.
 export PATH="$PATH:$HOME/.local/scripts:$FORGIT_INSTALL_DIR/bin:$HOME/.local/bin"
+export TERMINFO='/usr/share/terminfo/'
+export TERM='screen-256color'
 
 # gruvbox fzf theme.
 export FZF_THEME='
@@ -34,7 +39,9 @@ export FZF_DEFAULT_OPTS="${FZF_THEME}
 "
 
 # mpv encode
-export AES_KEY="6e17aa64249d64b9f17758d7a44ad659"
-export AES_IV="1c1d79dd08ea6f8f16475779ca045774"
+#export AES_KEY="6e17aa64249d64b9f17758d7a44ad659"
+#export AES_IV="1c1d79dd08ea6f8f16475779ca045774"
 
+export AES_KEY="01234567891011121314151617181920"
+export AES_IV="20191817161514131211109876543210"
 source $HOME/.zsh/aliasrc.zsh

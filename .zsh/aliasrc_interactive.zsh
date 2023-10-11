@@ -24,7 +24,7 @@ extr ()
 }
 
 # use tqdm to show progress bar on terminal.
-# use openssl aes-128 encrypt or decrypt files.
+# use openssl aes-128-cbc encrypt or decrypt files.
 # NOTICE: aes128 encryption will generate a suffix .aes128 and thus
 # aes128 will not decrypt file without .aes128 suffix
 aes128() {
@@ -56,10 +56,6 @@ alias mpv='/usr/bin/mpv --script=~/.config/mpv/manuals/thumbfast.lua'
 alias mppv='/usr/bin/mpv --hwdec=no --script=~/.config/mpv/manuals/encode.lua --script=~/.config/mpv/manuals/crop.lua'
 # use mpv decode aes-128 encrypted video.
 mpev() {
-    if [ $(file $1 | cut -d ' ' -f2) != "data" ] ; then
-        echo "$1 is not encrypted file."
-        return -1
-    fi
     /usr/bin/mpv lavf://crypto:$1 --stream-lavf-o=key=$AES_KEY,iv=$AES_IV
 }
 

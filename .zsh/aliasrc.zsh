@@ -10,20 +10,22 @@ alias fzfnet="$HOME/.local/scripts/nmcli_choose"
 
 
 # use git bare to manage linux dotfiles.
-alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree $HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree $HOME"
+
+# use vim or neovim as default editor with EDITOR environment.
+alias vi="$EDITOR"
+alias vim="$EDITOR"
+
+alias zat="zathura"
 
 
-alias v="vim"
-alias vi="vim"
-alias nvi="nvim"
-alias nv="nvim"
 alias pacman="sudo pacman"
 alias calendar="cal"
 alias zshrc="$EDITOR ~/.zsh/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias kittyrc="$EDITOR ~/.config/kitty/kitty.conf"
 alias aliasrc="$EDITOR ~/.zsh/aliasrc.zsh"
-alias svim="sudo -E vim"
+alias svim="sudo -E $EDITOR"
 alias ..="cd .."
 alias ~="cd ~"
 alias cls="clear"

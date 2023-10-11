@@ -3,9 +3,9 @@
 
 * {
     font-family: TerminessTTF Nerd Font Mono;
-    font-size: 28px;
+    font-size: 16px;
 }
-///* workspaces */
+/* workspaces */
 .workspaces_widget {
     border-radius:8px;
     border: 1px solid $border;
@@ -13,6 +13,7 @@
     background-color: $bg;
 }
 .workspace_entry {
+    font-weight: bold;
     color: $fg;
     border-radius:8px;
     margin: 0 0 0 0;
@@ -21,12 +22,11 @@
     color: $workspace_current_fg;
     background-color: $workspace_current_bg;
 }
-// show window nums in current workspace.
+/* show window nums in current workspace */
 .workspace_superscripts {
     font-size: 22px;
-    font-weight: bold;
+    color: $workspace_superscripts_fg;
 }
-.active_window {
-    color: #ffffff;
-    font-size: 14px;
+.window_title {
+    color: $workspace_superscripts_fg;
 }
