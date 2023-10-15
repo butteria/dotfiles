@@ -5,14 +5,17 @@
     font-family: TerminessTTF Nerd Font Mono;
     font-size: 16px;
 }
-/* workspaces */
-.workspaces_widget {
+/* All Module */
+.module {
     border-radius:8px;
     border: 1px solid $border;
     padding: .2rem .5rem 0.2rem .5rem;
     background-color: $bg;
+
 }
-.workspace_entry {
+
+/* workspaces */
+.workspaces_entry {
     font-weight: bold;
     color: $fg;
     border-radius:8px;
@@ -27,6 +30,13 @@
     font-size: 22px;
     color: $workspace_superscripts_fg;
 }
-.window_title {
+.active_window_class {
+    font-weight: bold;
+    font-size: 20px;
     color: $workspace_superscripts_fg;
 }
+.active_window_title {
+    color: $border;
+}
+
+/* clock module */

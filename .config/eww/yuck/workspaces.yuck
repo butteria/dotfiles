@@ -1,0 +1,120 @@
+;; workspace on hyprland.
+(defvar WORKSPACE_SUPERSCRIPTS '["⁰","¹","²","³","⁴","⁵","⁶","⁷","⁸","⁹","¹⁰"]')
+(defvar active_window_title_rev false)
+
+;; config
+(defvar icon_size "25")
+
+(deflisten workspaces :initial "[]" "bash ~/.config/eww/scripts/workspaces/get-workspaces")
+(deflisten current_workspace :initial "1" "bash ~/.config/eww/scripts/workspaces/get-active-workspace")
+(deflisten active_window :initial "[]" "bash ~/.config/eww/scripts/workspaces/get-active-window")
+(defwidget workspaces []
+    (box :class "module workspaces_module" :space-evenly false
+        (eventbox :onscroll "bash ~/.config/eww/scripts/workspaces/change-active-workspace {} ${current_workspace}"
+            (box :class "workspaces_submodule" :space-evenly false
+                (revealer :reveal "${workspaces[0].windows != 0 || current_workspace == 1 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 1"
+                        (box :class "workspaces_entry ${current_workspace == 1 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${workspaces[0].windows > 5 ? "^" : WORKSPACE_SUPERSCRIPTS[workspaces[0].windows]}")
+                            (label :class "workspace_icons" :text "1 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[1].windows != 0 || current_workspace == 2 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 2"
+                        (box :class "workspaces_entry ${current_workspace == 2 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[1].windows]}")
+                            (label :class "workspace_icons" :text "2 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[2].windows != 0 || current_workspace == 3 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 3"
+                        (box :class "workspaces_entry ${current_workspace == 3 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[2].windows]}")
+                            (label :class "workspace_icons" :text "3 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[3].windows != 0 || current_workspace == 4 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 4"
+                        (box :class "workspaces_entry ${current_workspace == 4 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[3].windows]}")
+                            (label :class "workspace_icons" :text "4 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[4].windows != 0 || current_workspace == 5 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 5"
+                        (box :class "workspaces_entry ${current_workspace == 5 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[4].windows]}")
+                            (label :class "workspace_icons" :text "5 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[5].windows != 0 || current_workspace == 6 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 6"
+                        (box :class "workspaces_entry ${current_workspace == 6 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[5].windows]}")
+                            (label :class "workspace_icons" :text "6 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[6].windows != 0 || current_workspace == 7 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 7"
+                        (box :class "workspaces_entry ${current_workspace == 7 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[6].windows]}")
+                            (label :class "workspace_icons" :text "7 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[7].windows != 0 || current_workspace == 8 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 8"
+                        (box :class "workspaces_entry ${current_workspace == 8 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[7].windows]}")
+                            (label :class "workspace_icons" :text "8 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[8].windows != 0 || current_workspace == 9 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 9"
+                        (box :class "workspaces_entry ${current_workspace == 9 ? "current" : ""}"
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[8].windows]}")
+                            (label :class "workspace_icons" :text "9 ")
+                        )
+                    )
+                )
+                (revealer :reveal "${workspaces[9].windows != 0 || current_workspace == 10 ? true : false}" :transition "slideright"
+                    (eventbox :onclick "hyprctl dispatch workspace 10"
+                        (box :class "workspaces_entry ${current_workspace == 10 ? "current" : ""}" :space-evenly false
+                            (label :class "workspace_superscripts" :text "${WORKSPACE_SUPERSCRIPTS[workspaces[9].windows]}")
+                            (label :class "workspace_icons" :text "10 ")
+                        )
+                    )
+                )
+            )
+        )
+        (eventbox
+            :onrightclick "kill -9 ${active_window.pid}"
+            :onhover "eww update active_window_title_rev=true"
+            :onhoverlost "eww update active_window_title_rev=false"
+            (box :class "active_window_submodule" :space-evenly false
+                (revealer :reveal "${active_window.class == "null" ? false : true}" :transition "slideright"
+                    (box :class "active_window_class_submodule" :space-evenly false
+                        (label :class "seperator" :text "|[ ")
+                        (image :path "icons/${active_window.class}.svg" :image-width "${icon_size}" :image-height "${icon_size}")
+                        (label :class "active_window_class" :text "${active_window.class == "null" ? "" : active_window.class} ")
+                        (label :class "seperator" :text "]")
+                    )
+                )
+                (revealer :reveal active_window_title_rev :visible "${workspaces[current_workspace - 1].windows == 0 ? false : true}" :transition "slideright"
+                    (box :class "active_window_title_submodule" :space-evenly false
+                        (label :class "seperator" :text "< ")
+                        (label :text "${active_window.title == "null" ? "" : active_window.title} ")
+                        (label :class "seperator" :text ">")
+                    )
+                )
+            )
+        )
+    )
+)

@@ -4,7 +4,6 @@
 export EDITOR
 
 export ARCHFLAGS="-arch x86_64"
-export ZPLUG_DIR="$HOME/.zsh/plugin"
 # add environment path here.
 export PATH="$PATH:$HOME/.local/scripts:$FORGIT_INSTALL_DIR/bin:$HOME/.local/bin"
 export TERMINFO='/usr/share/terminfo/'

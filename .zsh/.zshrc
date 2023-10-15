@@ -23,32 +23,32 @@ setopt appendhistory
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
+
+
+
+fpath=(~/.zsh/plugin/zsh-completions/src $fpath)
+autoload -Uz compinit && compinit
+
+source ~/.zsh/plugin/forgit/completions/git-forgit.zsh
+source ~/.zsh/plugin/fzf-tab/fzf-tab.plugin.zsh
+source ~/.zsh/plugin/forgit/forgit.plugin.zsh
+source ~/.zsh/plugin/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/plugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# show hidden files.
+setopt globdots
+source ~/.zsh/plugin/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Plugin
 source ~/.zsh/lscolors.zsh
 # zsh-completions
-zstyle ':completion:*' menu select
+#zstyle ':completion:*' menu select
 # set list-colors to enable filename colorizing
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # preview directory's content with exa when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
+export LESSOPEN='|~/.lessfilter %s'
 
 # Uses LS_COLORS format
 zstyle $pattern list-colors ${(s[:])LS_COLORS} '*.ext=1'
-
-
-
-
-fpath=($ZPLUG_DIR/zsh-completions/src $fpath)
-autoload -Uz compinit && compinit
-
-source $ZPLUG_DIR/forgit/completions/git-forgit.zsh
-source $ZPLUG_DIR/forgit/forgit.plugin.zsh
-source $ZPLUG_DIR/powerlevel10k/powerlevel10k.zsh-theme
-source $ZPLUG_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# show hidden files.
-setopt globdots
-source $ZPLUG_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugin/fzf-tab/fzf-tab.plugin.zsh
 
 
 

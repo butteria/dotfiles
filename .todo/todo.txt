@@ -1,1 +1,2 @@
 bug: window rule:center. @hyprland
+install mp4box@pacman

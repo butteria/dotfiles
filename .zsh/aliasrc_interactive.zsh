@@ -50,8 +50,15 @@ aes128() {
     fi
 }
 
-# default mpv alias.
-alias mpv='/usr/bin/mpv --script=~/.config/mpv/manuals/thumbfast.lua'
+#  ╔═╗╦  ╦  ╔═╗╔═╗╔╗╔╔═╗╦╔═╗
+#  ║  ║  ║  ║  ║ ║║║║╠╣ ║║ ╦
+#  ╚═╝╩═╝╩  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
+# MPV
+alias mpv='/usr/bin/mpv --no-input-default-bindings'
+# FFMPEG
+alias ffmpeg='ffmpeg -hide_banner'
+
+
 # mpv with encode feature.
 alias mppv='/usr/bin/mpv --hwdec=no --script=~/.config/mpv/manuals/encode.lua --script=~/.config/mpv/manuals/crop.lua'
 # use mpv decode aes-128 encrypted video.

@@ -17,7 +17,8 @@ alias vi="$EDITOR"
 alias vim="$EDITOR"
 
 alias zat="zathura"
-
+# backup file when using mv overwrite
+alias mv="mv -b"
 
 alias pacman="sudo pacman"
 alias calendar="cal"
