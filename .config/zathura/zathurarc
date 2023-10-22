@@ -1,0 +1,60 @@
+#set adjust-open "width"
+
+set log-level "error"
+# auto copy selection to clipboard
+set selection-clipboard clipboard
+set selection-notification "false"
+
+set scroll-full-overlap 0.01
+set scroll-step 100
+
+set font "TerminessTTF Nerd Font Mono 12"
+set statusbar-basename "true"
+set page-padding 5
+
+set notification-bg "#A9B665"
+#  ┬┌─┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐
+#  ├┴┐├┤ └┬┘│││├─┤├─┘└─┐
+#  ┴ ┴└─┘ ┴ ┴ ┴┴ ┴┴  └─┘
+
+# theme
+set notification-error-bg       "#32302f"
+set notification-error-fg       "#fb4934"
+set notification-warning-bg     "#32302f"
+set notification-warning-fg     "#fabd2f"
+set notification-bg             "#32302f"
+set notification-fg             "#b8bb26"
+
+set completion-bg               "#504945"
+set completion-fg               "#ebdbb2"
+set completion-group-bg         "#3c3836"
+set completion-group-fg         "#928374"
+set completion-highlight-bg     "#83a598"
+set completion-highlight-fg     "#504945"
+
+# Define the color in index mode
+set index-bg                    "#504945"
+set index-fg                    "#ebdbb2"
+set index-active-bg             "#83a598"
+set index-active-fg             "#504945"
+
+set inputbar-bg                 "#32302f"
+set inputbar-fg                 "#ebdbb2"
+
+set statusbar-bg                "#504945"
+set statusbar-fg                "#ebdbb2"
+
+set highlight-color             "#fabd2f"
+set highlight-active-color      "#fe8019"
+
+set default-bg                  "#32302f"
+set default-fg                  "#ebdbb2"
+set render-loading              true
+set render-loading-bg           "#32302f"
+set render-loading-fg           "#ebdbb2"
+
+# Recolor book content's color
+set recolor-lightcolor          "#32302f"
+set recolor-darkcolor           "#ebdbb2"
+set recolor                     false
+# set recolor-keephue           true

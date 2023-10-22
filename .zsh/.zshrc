@@ -44,8 +44,8 @@ source ~/.zsh/lscolors.zsh
 # set list-colors to enable filename colorizing
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # preview directory's content with exa when completing cd
-zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
-export LESSOPEN='|~/.lessfilter %s'
+#zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
+#export LESSOPEN='|~/.lessfilter %s'
 
 # Uses LS_COLORS format
 zstyle $pattern list-colors ${(s[:])LS_COLORS} '*.ext=1'

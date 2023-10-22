@@ -1,7 +1,7 @@
-(defpoll clock_hour :interval "50m" "date +\%H")
-(defpoll clock_minute :interval "50s" "date +\%M")
+(defpoll clock_hour :interval "30m" "date +\%H")
+(defpoll clock_minute :interval "30s" "date +\%M")
 (defpoll clock_second :interval "1s" "date +\%S")
-(defpoll clock_date :interval "10h" "date '+%a %d'")
+(defpoll clock_date :interval "11h" "date '+%a %d'")
 
 (defvar second_date_rev false)
 

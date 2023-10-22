@@ -1,9 +1,12 @@
 // import colors
-@import "colors/gruvbox";
+@import "colors/gruvbox.scss";
 
 * {
     font-family: TerminessTTF Nerd Font Mono;
     font-size: 16px;
+}
+/* bar */
+.bar {
 }
 /* All Module */
 .module {
@@ -12,6 +15,9 @@
     padding: .2rem .5rem 0.2rem .5rem;
     background-color: $bg;
 
+}
+.volume_submodule {
+    background-color: red;
 }
 
 /* workspaces */

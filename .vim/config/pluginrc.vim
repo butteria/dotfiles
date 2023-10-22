@@ -71,6 +71,11 @@ let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1
 let g:NERDTreeMinimalUI = 1
+
+" Delete file and directory to rubbish bin through trash-cli
+let g:NERDTreeRemoveFileCmd = 'trash-put '
+let g:NERDTreeRemoveDirCmd = 'trash-put '
+let g:NERDTreeAutoDeleteBuffer = 1
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 

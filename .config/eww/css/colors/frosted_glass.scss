@@ -1,8 +1,9 @@
 $fg: rgba(212, 190, 152, 0.6);
-
-$bg: rgba(188, 188, 188, 0.4);
+$bg: rgba(255, 255, 255, 0);
 
 
 /* workspace */
-$workspace_current_foreground: rgba(255, 255, 255, 1);
-$workspace_current_background: rgba(169, 182, 101, 1);
+$workspace_current_fg: $fg;
+$workspace_current_bg: $bg;
+$border: #a9b665;
+$workspace_superscripts_fg: #FABD2F;

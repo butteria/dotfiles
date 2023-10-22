@@ -107,11 +107,12 @@
                         (label :class "seperator" :text "]")
                     )
                 )
-                (revealer :reveal active_window_title_rev :visible "${workspaces[current_workspace - 1].windows == 0 ? false : true}" :transition "slideright"
+                (revealer :reveal active_window_title_rev :visible "${workspaces[current_workspace - 1].windows == 0 ? false : true}"
+                            :transition "slideright"
                     (box :class "active_window_title_submodule" :space-evenly false
-                        (label :class "seperator" :text "< ")
-                        (label :text "${active_window.title == "null" ? "" : active_window.title} ")
-                        (label :class "seperator" :text ">")
+                        (label :class "seperator" :text "> ")
+                        (label :show-truncated true :truncate-left false :limit-width "20"
+                                :text "${active_window.title == "null" ? "" : active_window.title} ")
                     )
                 )
             )

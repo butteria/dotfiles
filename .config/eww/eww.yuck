@@ -16,7 +16,7 @@
     :namespace "eww_bar"
     :focusable false
     :exclusive true
-    (box
+    (box :class "bar"
         (box :class "start_module"
             :halign "start"
         )
@@ -27,7 +27,6 @@
         (box :class "end_module"
             :space-evenly false :spacing "10"
             :halign "end"
-            (tray)
             (clock)
         )
     )

@@ -91,7 +91,6 @@ set t_vb=
 set tm=500
 set termguicolors
 colorscheme gruvbox
-"set mouse=
 
 " smart cursor: change cursor type in different mode.
 " https://github.com/kovidgoyal/kitty/issues/2045

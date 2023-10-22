@@ -55,16 +55,13 @@ aes128() {
 #  ╚═╝╩═╝╩  ╚═╝╚═╝╝╚╝╚  ╩╚═╝
 # MPV
 alias mpv='/usr/bin/mpv --no-input-default-bindings'
-# FFMPEG
-alias ffmpeg='ffmpeg -hide_banner'
-
-
 # mpv with encode feature.
-alias mppv='/usr/bin/mpv --hwdec=no --script=~/.config/mpv/manuals/encode.lua --script=~/.config/mpv/manuals/crop.lua'
+alias MPV='/usr/bin/mpv --hwdec=no --script=~/.config/mpv/manuals/encode.lua --script=~/.config/mpv/manuals/crop.lua'
 # use mpv decode aes-128 encrypted video.
-mpev() {
-    /usr/bin/mpv lavf://crypto:$1 --stream-lavf-o=key=$AES_KEY,iv=$AES_IV
-}
+mpev() { /usr/bin/mpv lavf://crypto:$1 --stream-lavf-o=key=$AES_KEY,iv=$AES_IV }
+# FFMPEG
+alias ffmpeg='ffmpeg -hide_banner '
+
 
 # Changing "ls" to "exa" with icons
 alias ls='exa --icons --color=always --group-directories-first'

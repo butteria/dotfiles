@@ -1,2 +1,4 @@
 bug: window rule:center. @hyprland
 install mp4box@pacman
+qt.qpa.plugin: Could not find the Qt platform plugin@flameshot
+eww revealer take place over clock

@@ -5,7 +5,7 @@ swww init
 swww img ~/Pictures/wallpapers/craig-nacroix-dokkaebi.png
 
 # mpvpaper set video wallpaper
-# mpvpaper -o "input-ipc-server=/tmp/mpv-socket no-audio --loop-file" eDP-1 ~/Pictures/wallpapers/animate &
+mpvpaper -o "input-ipc-server=/tmp/mpv-socket no-audio --loop-file" eDP-1 ~/Pictures/wallpapers/animate/Karuha-1080p.mp4 &
 
 # screenshots: flameshot
 # /usr/local/bin/flameshot &

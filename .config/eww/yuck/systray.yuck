@@ -1,5 +1,30 @@
+(defpoll current-volume :interval "1s" "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
+(defvar volume_rev true)
 (defwidget tray []
-    (box :class "module systray_module"
-        (systray :pack-direction "ltr")
+    (box :class "module tray_module"
+        (box ;;:class "system_tray_submodule"
+            ;; :space-evenly "false"
+	        (eventbox
+	            :onhover "eww update volume_rev=true"
+			    :onhoverlost "eww update volume_rev=false"
+                (box :class "volume_submodule"
+                       ;;     :space-evenly false
+	                (button :class "volume-icon" "ss")
+                    (revealer :transition "slideleft"
+                        :reveal volume_rev
+	                    (scale
+                            :orientation "h"
+			                :value "213"
+			                :tooltip "Volume: ${current-volume}%"
+			                :max 101 :min 0
+			                :onchange "amixer -D pulse sset Master {}%"
+                        )
+                    )
+                )
+            )
+        )
     )
+    ;;(box :class "module systray_module"
+    ;;    (systray :pack-direction "ltr")
+    ;;)
 )

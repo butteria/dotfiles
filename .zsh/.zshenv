@@ -2,6 +2,7 @@
 # use neovim in gui and vim in tty mode.
 [[ -n $DISPLAY ]] && EDITOR="nvim" || EDITOR="vim"
 export EDITOR
+export QT_QPA_PLATFORM=wayland
 
 export ARCHFLAGS="-arch x86_64"
 # add environment path here.

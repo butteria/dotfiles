@@ -16,7 +16,7 @@ alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree $HOME"
 alias vi="$EDITOR"
 alias vim="$EDITOR"
 
-alias zat="zathura"
+alias zat="zathura 2>/dev/null"
 # backup file when using mv overwrite
 alias mv="mv -b"
 
