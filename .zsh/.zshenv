@@ -10,6 +10,10 @@ export PATH="$PATH:$HOME/.local/scripts:$FORGIT_INSTALL_DIR/bin:$HOME/.local/bin
 export TERMINFO='/usr/share/terminfo/'
 export TERM='screen-256color'
 
+# use bat colored man page
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-P -c"
+
 # gruvbox fzf theme.
 export FZF_THEME='
 --color=dark

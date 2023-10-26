@@ -9,6 +9,8 @@
 # apply dircolor theme
 #eval "$(dircolors ~/.zsh/gruvbox.dircolors)"
 
+# use zhcon to display chinese font in tty mode
+zhcon >/dev/null 2>&1
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -23,6 +25,9 @@ setopt appendhistory
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
+# Highlighting --help messages
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 
 

@@ -7,12 +7,12 @@
     :geometry (geometry
         :x "0px"
         :y "0px"
-        :width "98%"
+        :width "100%"
         :height "0"
         :anchor "top center"
         )
     :stacking "fg"
-    :windowtype "dock"
+    ;;:windowtype "dock"
     :namespace "eww_bar"
     :focusable false
     :exclusive true
@@ -27,6 +27,7 @@
         (box :class "end_module"
             :space-evenly false :spacing "10"
             :halign "end"
+            ;;(tray)
             (clock)
         )
     )

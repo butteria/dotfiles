@@ -58,7 +58,16 @@ alias mpv='/usr/bin/mpv --no-input-default-bindings'
 # mpv with encode feature.
 alias MPV='/usr/bin/mpv --hwdec=no --script=~/.config/mpv/manuals/encode.lua --script=~/.config/mpv/manuals/crop.lua'
 # use mpv decode aes-128 encrypted video.
-mpev() { /usr/bin/mpv lavf://crypto:$1 --stream-lavf-o=key=$AES_KEY,iv=$AES_IV }
+mpev() {
+    sub_file="${1%%.*}.srt"
+    if [ -f $sub_file ] ; then
+        echo "[mpev] $sub_file subtitle detected."
+        /usr/bin/mpv lavf://crypto:$1 --stream-lavf-o=key=$AES_KEY,iv=$AES_IV --sub-file=$sub_file
+    else
+        echo "[mpev] no subtitle files detected."
+        /usr/bin/mpv lavf://crypto:$1 --stream-lavf-o=key=$AES_KEY,iv=$AES_IV
+    fi
+}
 # FFMPEG
 alias ffmpeg='ffmpeg -hide_banner '
 

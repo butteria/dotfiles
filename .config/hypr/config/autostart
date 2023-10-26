@@ -11,7 +11,7 @@ mpvpaper -o "input-ipc-server=/tmp/mpv-socket no-audio --loop-file" eDP-1 ~/Pict
 # /usr/local/bin/flameshot &
 
 # eww bar
-eww daemon
+#eww daemon
 eww open bar
 
 # set cursor theme
