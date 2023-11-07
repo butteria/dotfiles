@@ -1,9 +1,0 @@
-#!/bin/sh
-
-active=$(hyprctl activewindow | grep title | cut -b9-)
-
-if [ "$active" = "" ]; then
-  echo Desktop
-else
-  echo $active
-fi
