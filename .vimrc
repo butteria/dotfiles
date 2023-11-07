@@ -9,14 +9,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/tagbar'
     Plug 'mhinz/vim-startify'
     Plug 'lervag/vimtex'
-    Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-commentary'
     Plug 'vim-airline/vim-airline'
     Plug 'blueyed/vim-diminactive'
     Plug 'jiangmiao/auto-pairs'
     Plug 'morhetz/gruvbox'
-    "Plug 'sainnhe/gruvbox-material'
     Plug 'preservim/nerdtree' |
         \ Plug 'Xuyuanp/nerdtree-git-plugin' |
         \ Plug 'ryanoasis/vim-devicons' |
